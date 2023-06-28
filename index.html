@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hustle Culture.</title>
+
+    <meta name="description" content="Dream Big, Hustle Bigger.">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://hustleculture.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hustle Culture.">
+    <meta property="og:description" content="Dream Big, Hustle Bigger.">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="hustleculture.net">
+    <meta property="twitter:url" content="https://hustleculture.net">
+    <meta name="twitter:title" content="Hustle Culture.">
+    <meta name="twitter:description" content="Dream Big, Hustle Bigger.">
+    <meta name="twitter:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<container>
+    <h1>
+        Hustle Culture.
+    </h1>
+    <h2>
+
+        Coming Soon | Q4
+    </h2>
+</container>
+<div class="cursor-circle"></div>
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        color: white;
+        cursor: none;
+    }
+
+    container {
+        animation: fadeIn 2s;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        cursor: none;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    .cursor-circle {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        pointer-events: none;
+        mix-blend-mode: difference;
+    }
+
+</style>
+
+<script>
+    const cursor = document.querySelector(".cursor-circle");
+
+    function getDimensions(e) {
+        cursor.style.top = `${e.clientY - 25}px`; // -25px for the size of the circle
+        cursor.style.left = `${e.clientX - 25}px`;
+    }
+
+    window.addEventListener("mousemove", (e) => {
+        cursor.style.display = "inline"
+        getDimensions(e);
+    });
+</script>
+
+</body>
+</html>
