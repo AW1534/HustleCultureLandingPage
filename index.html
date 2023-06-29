@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hustle Culture.</title>
@@ -24,74 +25,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-<container>
-    <h1>
-        Hustle Culture.
-    </h1>
-    <h2>
+    <container>
+        <h1>
+            Hustle Culture.
+        </h1>
+        <h2>
+            Coming Soon | Q4
+        </h2>
+        <h2>
+            <a href="https://www.instagram.com/h.u5tle/"><i class="fi fi-brands-instagram"></i></a> <a href="https://tiktok.com/hustle.culture"><i class="fi fi-brands-tik-tok"></i></a> <a href="https://twitter.com/hu5tle2023"><i class="fi fi-brands-twitter"></i></a>
+        </h2>
+        
+    </container>
+    <div id="cursor-circle"></div>
 
-        Coming Soon | Q4
-    </h2>
-</container>
-<div class="cursor-circle"></div>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            cursor: none;
 
-<style>
-    body {
-        margin: 0;
-        background: black;
-        color: white;
-        cursor: none;
-    }
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
 
-    container {
-        animation: fadeIn 2s;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        font-family: 'Lato', sans-serif;
-        text-align: center;
-        cursor: none;
-    }
+        container {
+            animation: fadeIn 2s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-family: 'Lato', sans-serif;
+            text-align: center;
+            cursor: none;
+        }
 
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
+        i {
+            padding: 20px;
+        }
 
-    .cursor-circle {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 60px;
-        height: 60px;
-        background: white;
-        border-radius: 50%;
-        pointer-events: none;
-        mix-blend-mode: difference;
-    }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
 
-</style>
+            100% {
+                opacity: 1;
+            }
+        }
 
-<script>
-    const cursor = document.querySelector(".cursor-circle");
+        #cursor-circle {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            mix-blend-mode: difference;
+        }
 
-    function getDimensions(e) {
-        cursor.style.top = `${e.clientY - 25}px`; // -25px for the size of the circle
-        cursor.style.left = `${e.clientX - 25}px`;
-    }
+        a {
+            color: white;
+            text-decoration: none; /* no underline */
 
-    window.addEventListener("mousemove", (e) => {
-        cursor.style.display = "inline"
-        getDimensions(e);
-    });
-</script>
+            border-radius: 10px;
+        }
+
+        a:hover {
+          color: white;  
+        }
+
+    </style>
+
+    <script>
+        const cursor = document.querySelector("#cursor-circle");
+
+        function getDimensions(e) {
+            cursor.style.top  = `${e.clientY - 25}px`; // -25px for the size of the circle
+            cursor.style.left = `${e.clientX - 25}px`;
+        }
+
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.display = "inline"
+            getDimensions(e);
+        });                      
+
+    </script>
 
 </body>
+
 </html>
