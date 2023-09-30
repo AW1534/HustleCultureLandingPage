@@ -26,14 +26,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pirata+One&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
-<video autoplay muted loop playsinline controls id="bgVideo">
+<video autoplay muted loop playsinline id="bgVideo">
     <source src="assets/bgvid_effects2.MOV" type="video/mp4">
 </video>
 
@@ -59,26 +58,6 @@
 
         }
 
-        #bgVideo::-webkit-media-controls,
-        #bgVideo::-webkit-media-controls-enclosure,
-        #bgVideo::-webkit-media-controls,
-        #bgVideo::-webkit-media-controls-enclosure {
-            display: none !important;
-        }
-
-        /* For Firefox */
-        #bgVideo::-moz-media-controls,
-        #bgVideo::-moz-media-controls {
-            display: none !important;
-        }
-
-        /* For Edge */
-        #bgVideo::-ms-media-controls {
-            display: none !important;
-        }
-
-
-
         #logo {
             width: 10rem;
             transform: translateY(1vw);
@@ -89,11 +68,6 @@
             background: black;
             color: white;
         }
-        /* 
-        h1 {
-            font-family: 'Pirata One', cursive;
-            font-size: 40pt;
-        } */
 
         h2 {
             padding: 0%;
