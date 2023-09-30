@@ -32,10 +32,13 @@
 </head>
 
 <body>
+
+<video autoplay muted loop id="bgVideo">
+    <source src="assets/bgvid_effects.MOV" type="video/mp4">
+</video>
+
     <container>
-        <h1>
-            Hustle Culture.
-        </h1>
+        <img id="logo" src="./assets/High-Res-White-Logo.png" alt="Hustle Culture">
         <h2>
             Coming Soon | Q4
         </h2>
@@ -44,21 +47,26 @@
         </h2>
         
     </container>
-    <div id="cursor-circle"></div>
 
     <style>
+        #bgVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translateX(calc((100% - 100vw) / 2));
+        }
+
+        #logo {
+            width: 10rem;
+            transform: translateY(1vw);
+        }
+
         body {
             margin: 0;
             background: black;
             color: white;
-            cursor: none;
-
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
         }
         /* 
         h1 {
@@ -79,7 +87,6 @@
             transform: translate(-50%, -50%);
             font-family: 'Lato', sans-serif;
             text-align: center;
-            cursor: none;
         }
 
         i {
@@ -96,19 +103,6 @@
             }
         }
 
-        #cursor-circle {
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-            pointer-events: none;
-            mix-blend-mode: difference;
-        }
-
         a {
             color: white;
             text-decoration: none; /* no underline */
@@ -121,30 +115,6 @@
         }
 
     </style>
-
-    <script>
-        const cursor = document.querySelector("#cursor-circle");
-
-        function getDimensions(e) {
-            cursor.style.top  = `${e.clientY - 25}px`; // -25px for the size of the circle
-            cursor.style.left = `${e.clientX - 25}px`;
-        }
-
-        window.addEventListener("mousemove", (e) => {
-            cursor.style.display = "inline"
-            getDimensions(e);
-        });                      
-
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWNCB3X8GB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-YWNCB3X8GB');
-    </script>
 
 </body>
 
