@@ -32,7 +32,7 @@
 
 <body>
 
-<video autoplay muted loop playsinline id="bgVideo">
+<video autoplay muted loop playsinline controls="false" id="bgVideo">
     <source src="assets/bgvid_effects2.MOV" type="video/mp4">
 </video>
 
@@ -113,6 +113,18 @@
 
 <script>
     const bgVideo = document.querySelector('#bgVideo')
+
+    // Function to handle video playback
+    function handleVideoPlayback() {
+
+        // Play the video
+        if (bgVideo.paused) {
+            bgVideo.play();
+        }
+    }
+
+    // Add a click event listener to the document to handle play/pause when clicked anywhere
+    document.addEventListener('click', handleVideoPlayback);
 
 </script>
 
