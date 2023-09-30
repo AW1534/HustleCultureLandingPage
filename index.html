@@ -59,6 +59,26 @@
 
         }
 
+        #bgVideo::-webkit-media-controls,
+        #bgVideo::-webkit-media-controls-enclosure,
+        #bgVideo::-webkit-media-controls,
+        #bgVideo::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+
+        /* For Firefox */
+        #bgVideo::-moz-media-controls,
+        #bgVideo::-moz-media-controls {
+            display: none !important;
+        }
+
+        /* For Edge */
+        #bgVideo::-ms-media-controls {
+            display: none !important;
+        }
+
+
+
         #logo {
             width: 10rem;
             transform: translateY(1vw);
@@ -119,10 +139,6 @@
 
 <script>
     const bgVideo = document.querySelector('#bgVideo')
-
-    setTimeout(() => {
-        bgVideo.play()
-    }, 1000)
 
 </script>
 
