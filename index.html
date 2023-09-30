@@ -55,7 +55,8 @@
             bottom: 0;
             min-width: 100%;
             min-height: 100%;
-            transform: translateX(calc((100% - 100vw) / 2));
+            transform: translateX(calc((100% - 100vw) / 2)) translateY(calc((100% - 100vh) / 2));
+
         }
 
         #logo {
@@ -115,6 +116,15 @@
         }
 
     </style>
+
+<script>
+    const bgVideo = document.querySelector('#bgVideo')
+
+    setTimeout(() => {
+        bgVideo.play()
+    }, 0)
+
+</script>
 
 </body>
 
